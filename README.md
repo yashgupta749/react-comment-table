@@ -1,70 +1,150 @@
-# Getting Started with Create React App
+# React Comment Table
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive React application for viewing and managing user comments with real-time search, pagination, and inline editing capabilities.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+- **📊 Interactive Comment Table**: Display comments in a clean, organized table format
+- **🔍 Real-time Search**: Search through comments by email, name, or comment content
+- **✏️ Inline Editing**: Edit comment names and bodies directly in the table
+- **💾 Local Storage**: Automatically saves edits to browser localStorage
+- **📱 Responsive Design**: Mobile-friendly card view and desktop table view
+- **📄 Pagination**: Navigate through large datasets with smart pagination
+- **🔄 Data Persistence**: Edits persist across browser sessions
+- **⚡ Fast Loading**: Optimized data fetching with loading states
 
-### `npm start`
+## 🛠️ Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Frontend
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **React 19.1.0** - Modern React with hooks and functional components
+- **React DOM 19.1.0** - React rendering for web
+- **CSS3** - Custom styling with responsive design
+- **Local Storage API** - Client-side data persistence
 
-### `npm test`
+### Development Tools
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Create React App 5.0.1** - React development environment
+- **React Scripts 5.0.1** - Build tools and development server
+- **ESLint** - Code linting and quality assurance
 
-### `npm run build`
+### Testing
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **@testing-library/react 16.3.0** - React component testing
+- **@testing-library/jest-dom 6.6.3** - Custom Jest matchers
+- **@testing-library/user-event 13.5.0** - User interaction testing
+- **@testing-library/dom 10.4.0** - DOM testing utilities
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### External APIs
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **JSONPlaceholder API** - Mock data for comments and posts
 
-### `npm run eject`
+## 📦 Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. **Clone the repository**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   git clone <repository-url>
+   cd react-comment-table
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. **Install dependencies**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```bash
+   npm install
+   ```
 
-## Learn More
+3. **Start the development server**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   ```bash
+   npm start
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000) to view the application.
 
-### Code Splitting
+## 🎯 Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Viewing Comments
 
-### Analyzing the Bundle Size
+- The application automatically loads comments from the JSONPlaceholder API
+- Comments are displayed in a table format on desktop and card format on mobile
+- Each comment shows: Email, Name, Comment body, and associated Post title
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Searching Comments
 
-### Making a Progressive Web App
+- Use the search bar in the navigation to filter comments
+- Search works across email, name, and comment content
+- Results update in real-time as you type
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Editing Comments
 
-### Advanced Configuration
+- **Desktop**: Click on the name or comment fields to edit inline
+- **Mobile**: Edit directly in the card view
+- All edits are automatically saved to localStorage
+- Edits persist when you refresh the page
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Navigation
 
-### Deployment
+- Use pagination controls to navigate through large datasets
+- 10 comments are displayed per page
+- Smart pagination shows relevant page numbers with ellipsis for large datasets
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 📁 Project Structure
 
-### `npm run build` fails to minify
+```
+src/
+├── components/
+│   ├── CommentTable.jsx    # Main table component with pagination
+│   ├── Navbar.jsx          # Navigation bar with search
+│   └── TableRow.jsx        # Individual table row component
+├── App.js                  # Main application component
+├── App.css                 # Application styles
+└── index.js               # Application entry point
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🧪 Testing
+
+Run the test suite:
+
+```bash
+npm test
+```
+
+Run tests in watch mode:
+
+```bash
+npm test -- --watch
+```
+
+## 🏗️ Building for Production
+
+Create a production build:
+
+```bash
+npm run build
+```
+
+The build files will be created in the `build/` directory, ready for deployment.
+
+## 🔧 Available Scripts
+
+- `npm start` - Runs the app in development mode
+- `npm test` - Launches the test runner
+- `npm run build` - Builds the app for production
+- `npm run eject` - Ejects from Create React App (one-way operation)
+
+## 📝 API Integration
+
+The application fetches data from:
+
+- **Comments**: `https://jsonplaceholder.typicode.com/comments`
+- **Posts**: `https://jsonplaceholder.typicode.com/posts`
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+## 🆘 Support
+
+If you encounter any issues or have questions, please open an issue in the repository.
